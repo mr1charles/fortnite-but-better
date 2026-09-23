@@ -164,7 +164,7 @@ func take_damage(amount: float, attacker: Node3D = null) -> void:
 	if not alive:
 		return
 	var final_amount := amount * damage_taken_multiplier
-	var from_shield := min(shield, final_amount)
+	var from_shield: float = min(shield, final_amount)
 	shield -= from_shield
 	final_amount -= from_shield
 	health -= final_amount
