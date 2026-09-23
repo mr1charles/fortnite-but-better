@@ -1,0 +1,55 @@
+; Engine configuration file.
+; Project: Royale Offline (working title "Fortnite But Better")
+; Godot 4.x
+
+config_version=5
+
+[application]
+
+config/name="Royale Offline"
+config/description="A simplified, fully offline Battle-Royale built in Godot 4. One island, multiple biomes, loot, a shrinking storm, and a Tech Battle mode where the storm brings chaotic new rules each phase."
+run/main_scene="res://scenes/MainMenu.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/autoload/GameManager.gd"
+EconomyManager="*res://scripts/autoload/EconomyManager.gd"
+SkinDatabase="*res://scripts/autoload/SkinDatabase.gd"
+WeaponDatabase="*res://scripts/autoload/WeaponDatabase.gd"
+TechRuleDatabase="*res://scripts/autoload/TechRuleDatabase.gd"
+ShopManager="*res://scripts/autoload/ShopManager.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[input]
+
+move_forward={"deadzone":0.2,"events":[{"type":"key","physical_keycode":87}]}
+move_back={"deadzone":0.2,"events":[{"type":"key","physical_keycode":83}]}
+move_left={"deadzone":0.2,"events":[{"type":"key","physical_keycode":65}]}
+move_right={"deadzone":0.2,"events":[{"type":"key","physical_keycode":68}]}
+jump={"deadzone":0.2,"events":[{"type":"key","physical_keycode":32}]}
+crouch={"deadzone":0.2,"events":[{"type":"key","physical_keycode":67}]}
+sprint={"deadzone":0.2,"events":[{"type":"key","physical_keycode":16777237,"shift_pressed":false}]}
+fire_primary={"deadzone":0.2,"events":[{"type":"mouse_button","button_index":1}]}
+fire_secondary={"deadzone":0.2,"events":[{"type":"mouse_button","button_index":2}]}
+use_consumable={"deadzone":0.2,"events":[{"type":"key","physical_keycode":81}]}
+reload={"deadzone":0.2,"events":[{"type":"key","physical_keycode":82}]}
+build_wall={"deadzone":0.2,"events":[{"type":"key","physical_keycode":49}]}
+build_floor={"deadzone":0.2,"events":[{"type":"key","physical_keycode":50}]}
+toggle_camera={"deadzone":0.2,"events":[{"type":"key","physical_keycode":86}]}
+open_shop={"deadzone":0.2,"events":[{"type":"key","physical_keycode":66}]}
+ui_cancel={"deadzone":0.2,"events":[{"type":"key","physical_keycode":4194305}]}
+
+[physics]
+
+3d/default_gravity=20.0
+
+[rendering]
+
+environment/defaults/default_environment="res://default_env.tres"
